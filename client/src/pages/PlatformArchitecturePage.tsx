@@ -164,7 +164,7 @@ export default function PlatformArchitecturePage() {
               className="space-y-4"
             >
               <h2 className="text-2xl md:text-3xl font-heading font-bold">
-                One Platform. Greater Community Impact.
+                One Platform. Strong Impact.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 A robust architecture that serves community protection, where public safety is
