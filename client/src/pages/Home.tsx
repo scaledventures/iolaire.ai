@@ -188,7 +188,7 @@ export default function Home() {
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/60 shadow-2xl shadow-primary/10 lg:scale-[1.05] lg:origin-center">
               <img
                 src={heroPageImg}
-                alt="iolaire.ai Hero"
+                alt="artino.ai Hero"
                 className="w-full h-full object-cover"
               />
             </div>
