@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { useLocation } from "wouter";
 import {
   Dialog,
   DialogContent,
@@ -15,13 +14,6 @@ const COOKIE_CONSENT_KEY = "iolaire-cookie-consent";
 type ConsentState = "accepted" | "declined" | "unset";
 
 export function CookieConsent() {
-  const [location] = useLocation();
-
-  // Hide cookie banner only on the dedicated first-time site login page.
-  // Important: do not return early before hooks, otherwise React throws
-  // "Rendered more hooks than during the previous render".
-  const hideOnLoginPages = location === "/site-login";
-
   const [consent, setConsent] = useState<ConsentState>("unset");
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [performanceEnabled, setPerformanceEnabled] = useState(true);
@@ -81,10 +73,6 @@ export function CookieConsent() {
     persistConsent(nextState);
     setSettingsOpen(false);
   };
-
-  if (hideOnLoginPages) {
-    return null;
-  }
 
   if (consent !== "unset") {
     return (
